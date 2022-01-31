@@ -35,13 +35,30 @@ header{
     left: 0;
 }
 
-footer button{
+.pedido-aberto{
     display: block;
     width: 364px;
     height: 61px;
     border: 0px;
     border-radius: 50px;
     background: #cbcbcb;
+    margin: 0 auto;
+    margin-top: 15px;
+    color: #ffffff;
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    font-weight: normal;
+}
+.pedido-fechado{
+    display: none;
+    width: 364px;
+    height: 61px;
+    border: 0px;
+    border-radius: 50px;
+    background: #32B72F;
     margin: 0 auto;
     margin-top: 15px;
     color: #ffffff;
@@ -177,4 +194,130 @@ footer{
 
 .selecionado{
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+}
+
+.caixa {
+    position: fixed;
+    width: 377px;
+    height: 353px;
+    top: calc(50% - 353px/2 - 0.5px);
+    left: 19px;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    z-index: 2;
+}
+.caixa h1{
+    width: 376px;
+    height: 27px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 21px;
+    margin-bottom: 28px;
+}
+.fundo {
+    position: fixed;
+    width: 414px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.prato-pedido{
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-pedido{
+    width: 172px;
+    height: 27px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    margin-left: 26px;
+    margin-bottom: 13px;
+}
+.valor-pedido{
+    width: 61px;
+    height: 27px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: right;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    margin-right: 25px;
+    margin-bottom: 13px;
+}
+.total-pedido{
+    display: flex;
+    justify-content: space-between;
+}
+.valor-total{
+    width: 97px;
+    height: 27px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    text-align: right;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    margin-right: 25px;
+    margin-bottom: 24px;
+}
+.total{
+    width: 73px;
+    height: 27px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+    color: #FFFFFF;
+    margin-left: 26px;
+    margin-bottom: 24px;
+}
+.finalizar-pedido{
+    width: 329px;
+    height: 52px;
+    margin-left: 24px;
+    background: #FFFFFF;
+    border-radius: 100px;
+    border: 0px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #50D074;
+    
+}
+.cancelar{
+    width: 333px;
+    height: 52px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.018em;
+    color: #ffffff;
+}
+.tela-pedido{
+    display: none;
 }

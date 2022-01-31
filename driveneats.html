@@ -12,6 +12,32 @@
     <title>DrivenEats</title>
 </head>
 <body>
+    <section class="tela-pedido">
+        <div class="caixa">
+            <h1>Confirme seu pedido</h1>
+            <div class="prato-pedido prato-escolhido">
+                <h2 class="item-pedido tipo-prato"></h2>
+                <h2 class="valor-pedido valor-prato"></h2>
+            </div>
+            <div class="prato-pedido bebida-escolhida">
+                <h2 class="item-pedido tipo-bebida"></h2>
+                <h2 class="valor-pedido valor-bebida"></h2>
+            </div>
+            <div class="prato-pedido sobremesa-escolhida">
+                <h2 class="item-pedido tipo-sobremesa"></h2>
+                <h2 class="valor-pedido valor-sobremesa"></h2>
+            </div>
+            <div class="total-pedido">
+                <h2 class="total">TOTAL</h2>
+                <h2 class="valor-total"></h2>
+            </div>
+            <button class="finalizar-pedido">Tudo certo, pode pedir</button>
+            <div class="cancelar">
+                <h1>Cancelar</h1>
+            </div>
+        </div>
+        <div class="fundo"></div>
+    </section>
     <header>
         <h1>DrivenEats</h1>
         <h2>Sua comida em 6 minutos</h2>
@@ -19,21 +45,21 @@
     <section class="pratos">
         <h1>Primeiro, seu prato</h1>
         <div class="comidas">
-            <div class="item frango" onclick="selecFrango()">
+            <div class="item frango" onclick="selecFrango('14.90')">
                 <img src="frango_yin_yang 1.png" />
                 <h2>Frango Yin Yang</h2>
                 <h3>Um pouco de batata, um pouco de salada</h3>
                 <h4>R$ 14,90</h4>
             </div>
-            <div class="item carne" onclick="selecCarne()">
+            <div class="item carne" onclick="selecCarne('15.90')">
                 <img src="frango_yin_yang 1.png" />
                 <h2>Carne ao molho</h2>
                 <h3>Apenas carne e molho</h3>
                 <h4>R$ 15,90</h4>
             </div>
-            <div class="item peixe" onclick="selecPeixe()">
+            <div class="item peixe" onclick="selecPeixe('16.90')">
                 <img src="frango_yin_yang 1.png" />
-                <h2>Peixe</h2>
+                <h2>Filé de Tilápia</h2>
                 <h3>Peixe frito</h3>
                 <h4>R$ 16,90</h4>
             </div>
@@ -42,19 +68,19 @@
     <section class="bebidas">
         <h1>Agora, sua bebida</h1>
         <div class="comidas">
-            <div class="item coca" onclick="selecCoca()">
+            <div class="item coca" onclick="selecCoca('6.90')">
                 <img src="coquinha_gelada 1.png" />
                 <h2>Coquinha gelada</h2>
                 <h3>Lata 350ml</h3>
                 <h4>R$ 6,90</h4>
             </div>
-            <div class="item guarana" onclick="selecGuarana()">
+            <div class="item guarana" onclick="selecGuarana('5.90')">
                 <img src="coquinha_gelada 1.png" />
                 <h2>Guaraná gelado</h2>
                 <h3>Lata 350ml</h3>
                 <h4>R$ 5,90</h4>
             </div>
-            <div class="item pepsi" onclick="selecPepsi()">
+            <div class="item pepsi" onclick="selecPepsi('4.90')">
                 <img src="coquinha_gelada 1.png" />
                 <h2>Pepsi gelada</h2>
                 <h3>Lata 350ml</h3>
@@ -65,19 +91,19 @@
     <section class="sobremesas">
         <h1>Por fim, sua sobremesa</h1>
         <div class="comidas">
-            <div class="item pudim" onclick="selecPudim()">
+            <div class="item pudim" onclick="selecPudim('7.90')">
                 <img src="pudim 1.png" />
                 <h2>Pudim</h2>
                 <h3>Apenas pudim</h3>
                 <h4>R$ 7,90</h4>
             </div>
-            <div class="item brigadeiro" onclick="selecBrigadeiro()">
+            <div class="item brigadeiro" onclick="selecBrigadeiro('4.90')">
                 <img src="pudim 1.png" />
                 <h2>Brigadeiro</h2>
                 <h3>Apenas brigadeiro</h3>
                 <h4>R$ 4,90</h4>
             </div>
-            <div class="item sunday" onclick="selecSunday()">
+            <div class="item sunday" onclick="selecSunday('5.90')">
                 <img src="pudim 1.png" />
                 <h2>Sunday</h2>
                 <h3>Apenas sunday</h3>
@@ -86,7 +112,8 @@
         </div>
     </section>
     <footer>
-        <button>Selecione os 3 itens<br>para fechar o pedido</button>    
+        <button class="pedido-fechado">Fechar pedido</button>   
+        <button class="pedido-aberto">Selecione os 3 itens<br>para fechar o pedido</button>   
     </footer>
     <script src="script.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
