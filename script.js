@@ -2,12 +2,15 @@
 let valorP = 0;
 let valorB = 0;
 let valorS = 0;
+let valorTotal = 0;
 let contP = 0;
 let contB = 0;
 let contS = 0;
 let nomeP = null;
 let nomeB = null;
 let nomeS = null;
+let nomeCliente = null;
+let endereco = null;
 
 function liberaBotao(){
     let cont = contP + contB + contS;
@@ -129,8 +132,41 @@ function selecSunday(valorSobremesa, nomeCompleto) {
     nomeS = nomeCompleto;
 }
 function fecharPedido(){
-    let valorTotal = valorP + valorB + valorS;
-    
+    nomeCliente = prompt("Digite o seu nome: ");
+    endereco = prompt("Digite o seu endereço: ");
+    valorTotal = (valorP + valorB + valorS).toFixed(2);
+    let valorP1 = valorP.toFixed(2);
+    let valorB1 = valorB.toFixed(2);
+    let valorS1 = valorS.toFixed(2);
+    let valorTString = String(valorTotal);
+    valorTModificado = valorTString.replace(".", ",");
+    let valorPString = String(valorP1);
+    valorPModificado = valorPString.replace(".", ",");
+    let valorBString = String(valorB1);
+    valorBModificado = valorBString.replace(".", ",");
+    let valorSString = String(valorS1);
+    valorSModificado = valorSString.replace(".", ",");
+    let tipoPrato = document.querySelector(".tipo-prato");
+    tipoPrato.innerHTML = (nomeP);
+    let tipoBebida = document.querySelector(".tipo-bebida");
+    tipoBebida.innerHTML = (nomeB);
+    let tipoSobremesa = document.querySelector(".tipo-sobremesa");
+    tipoSobremesa.innerHTML = (nomeS);
+    let valorPrato = document.querySelector(".valor-prato");
+    valorPrato.innerHTML = (valorPModificado);
+    let valorBebida = document.querySelector(".valor-bebida");
+    valorBebida.innerHTML = (valorBModificado);
+    let valorSobremesa = document.querySelector(".valor-sobremesa");
+    valorSobremesa.innerHTML = (valorSModificado);
+    let valorEscrito = document.querySelector(".valor-total");
+    valorEscrito.innerHTML = ("R$ " + valorTModificado);
+    let aparecerTela = document.querySelector(".tela-pedido");
+    aparecerTela.style.display = "block";
+}
+function enviarPedido(){
+    let texto = ("Olá, gostaria de fazer o pedido:\n- Prato: " + nomeP + "\n- Bebida: " + nomeB + "\n- Sobremesa: " + nomeS + "\nTotal: R$ " + valorTotal + "\n\nNome: " + nomeCliente + "\nEndereço: " + endereco);
+    texto = window.encodeURIComponent(texto);
+    window.open("https://wa.me/5562999769996?text=" + texto);
 }
 
 
